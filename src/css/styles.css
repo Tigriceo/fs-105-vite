@@ -4,11 +4,15 @@
   | default @import url()
   |============================
 */
+@import url('../../node_modules/modern-normalize/modern-normalize.css');
 @import url('./reset.css');
+@import url('../../node_modules/swiper/swiper-bundle.min.css');
 @import url('./vite-promo.css');
 @import url('./header.css');
 @import url('./sections/section-hero.css');
+@import url('./sections/section-slider.css');
 @import url('./footer.css');
+@import url('./popup.css');
 
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
@@ -24,4 +28,25 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.img-html {
+  width: 200px;
+  height: 200px;
+
+  object-position: center;
+  object-fit: cover;
+}
+
+.img-css {
+  width: 200px;
+  height: 200px;
+  background: url('../img/mark.jpg') no-repeat;
+
+  background-position: center;
+  background-size: cover;
 }
