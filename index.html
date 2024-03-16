@@ -7,7 +7,9 @@
     <title>Vanilla App Template</title>
     
     <script type="module" crossorigin src="/fs-105-vite/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/fs-105-vite/assets/index-2e1e54e5.css">
+    <link rel="modulepreload" crossorigin href="/fs-105-vite/assets/vendor-bf84729e.js">
+    <link rel="stylesheet" href="/fs-105-vite/assets/vendor-73168167.css">
+    <link rel="stylesheet" href="/fs-105-vite/assets/index-e70592da.css">
   </head>
   <body>
     <header class="header">
@@ -33,13 +35,50 @@
         <section class="hero">
     <div class="container">
         <h1>HERO</h1>
+
+        <img src="/fs-105-vite/assets/mark-5768a8b8.jpg" class="img-html" alt="mark">
+
+        <div class="img-css"></div>
+<!-- data-video-type video or youtube -->
+        <button type="button" class="popupw-link" data-popup="video-popup" data-video-type="youtube" data-video-src="https://www.youtube.com/embed/4cEKAYnxbrk?si=srGznCWKQqo2mtGS">Відкрити відео</button>
+    </div>
+</section>
+        <section class="slider slider-1">
+    <div class="container">
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+
+                <div class="swiper-slide">Slide 11</div>
+                <div class="swiper-slide">Slide 22</div>
+                <div class="swiper-slide">Slide 33</div>
+
+                <div class="swiper-slide">Slide 111</div>
+                <div class="swiper-slide">Slide 222</div>
+                <div class="swiper-slide">Slide 333</div>
+           
+            </div>
+            <!-- If we need pagination -->
+            <ul class="swiper-pagination"></ul>
+
+            <!-- If we need navigation buttons -->
+            <button class="swiper-button-prev"></button>
+            <button class="swiper-button-next"></button>
+
+
+        </div>
     </div>
 </section>
         <section>
         
         <!-- Path to images as from index.html file -->
         <img src="/fs-105-vite/assets/javascript-8dac5379.svg" alt="" />
-      </section>
+        </section>
 
       <!-- Loads the specified .html file -->
       <section class="vite-promo">
@@ -55,7 +94,7 @@
       </p>
 
       <ul class="actions">
-        <li class="action">
+        <li class="action" data-aos="fade-up">
           <a
             class="link"
             href="https://vitejs.dev/guide/"
@@ -64,7 +103,7 @@
             >Get Started</a
           >
         </li>
-        <li class="action">
+        <li class="action" data-aos="fade-up" data-aos-delay="1000">
           <a
             class="link"
             href="https://github.com/vitejs/vite"
@@ -96,6 +135,16 @@
         FOOTER
     </div>
 </footer>
+    <div id="video-popup" class="popupw popupw-video">
+    <div class="popupw__wrapper">
+        <div class="popupw__content">
+            <button data-close type="button" class="popupw__close">
+                <span>Close</span>
+            </button>
+            <div class="video-content" data-popup-youtube-place></div>
+        </div>
+    </div>
+</div>
 
     
   </body>
